@@ -1,0 +1,7 @@
+<root main_tree_to_execute = "MainTree" >
+    <BehaviorTree ID="MainTree">
+        <ReactiveSequence name="main_behavior">
+            <Shoot/>
+        </ReactiveSequence>
+    </BehaviorTree>
+</root>

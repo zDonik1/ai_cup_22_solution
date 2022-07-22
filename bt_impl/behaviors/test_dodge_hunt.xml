@@ -1,0 +1,19 @@
+<root main_tree_to_execute = "MainTree" >
+    <BehaviorTree ID="MainTree">
+        <ReactiveFallback name="main_behavior">
+            <Dodge/>
+            <SubTreePlus ID="HuntTree"/>
+        </ReactiveFallback>
+    </BehaviorTree>
+
+<BehaviorTree ID="HuntTree">
+    <ReactiveSequence name="main_behavior">
+        <GetClosestTarget id="{target_id}"/>
+        <Parallel success_threshold="2">
+            <GoToTarget id="{target_id}"/>
+            <Look id="{target_id}"/>
+        </Parallel>
+        <Shoot/>
+    </ReactiveSequence>
+</BehaviorTree>
+</root>

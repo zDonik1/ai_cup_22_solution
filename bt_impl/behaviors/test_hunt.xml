@@ -1,0 +1,12 @@
+<root main_tree_to_execute = "MainTree" >
+    <BehaviorTree ID="MainTree">
+        <ReactiveSequence name="main_behavior">
+            <GetClosestTarget id="{target_id}"/>
+            <Parallel success_threshold="2">
+                <GoToTarget id="{target_id}"/>
+                <Look id="{target_id}"/>
+            </Parallel>
+            <Shoot/>
+        </ReactiveSequence>
+    </BehaviorTree>
+</root>

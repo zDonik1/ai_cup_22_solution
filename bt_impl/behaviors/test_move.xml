@@ -1,0 +1,7 @@
+<root main_tree_to_execute = "MainTree" >
+    <BehaviorTree ID="MainTree">
+        <Sequence name="main_behavior">
+            <Move vector="0,1"/>
+        </Sequence>
+    </BehaviorTree>
+</root>
